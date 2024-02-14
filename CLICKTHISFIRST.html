@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>For My Other Half</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALENTINE'S DAY</title>
+    <link rel="icon" type="image/png" sizes="100%" href="https://cdn-icons-png.flaticon.com/512/9444/9444300.png">
+    <script> 
+        alert('Hello stranger') ;
+        alert('char hi lovee!') ;
+        alert('How are you naman?') ;
+        alert("how's my gift? did you like it?") ;
+        alert('Sorry if mao rana akong ma afford rn :((') ;
+        alert('Bawi lang ko soon if maka angat angat nako huh') ;
+        alert("I promise soon if mahuman nakos college and I land a good paying job I'll buy you expensive gifts") ;
+        alert('For now all I can give you is my love but anyways') ;
+        alert('I have something to tell you ') ;
+        alert('uhmmm Quennie Hazel B. Guevarra, char bagaag nawong maka angkon ni Lebron oh') ;
+    </script>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            text-align: center;
+            background: linear-gradient(45deg, #ffcccc, #ff99cc);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 40%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .buttons-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff5f6d;
+            color: white;
+            transition: background-color 0.3s;
+            position: absolute;
+        }
+        button:hover {
+            background-color: #e64c5b;
+        }
+        #Button1 {
+            left: 10%;
+        }
+        #Button2 {
+            left: 75%;
+        }
+        #clickMeButton {
+            background-color: #ff5f6d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            display: none;
+        }
+        #clickMeButton:hover {
+            background-color: #e64c5b;
+        }
+        .letter {
+            display: none;
+            padding: 20px;
+            background-color: #ffc0cb;
+            border-radius: 10px;
+            margin: 0 auto;
+            max-width: 80%;
+            white-space: pre-line;
+            overflow: hidden;
+            border-right: 2px solid #000;
+            animation: typing 3s steps(40) forwards, blink-caret 0.75s infinite;
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            top: 50px;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://media.tenor.com/K_E6ORTmXMoAAAAM/milk-and-mocha-love.gif" alt="Kiss gif">
+    <div class="buttons-container">
+        <button id="Button1">Yes!</button>
+        <button id="Button2">No</button>
+    </div>
+
+    <div class="letter" id="letter">
+        <p>Hello love,</p>
+        <p>I want to thank you for everything na imong ibuhat para nako and para pud sa atong relationship. To be honest I was not expecting this relationship lagi kay una natong meet wala jd ta nag tagdanay, snobber kaayo ka HAHAHA. Bitaw HAPPY VALENTINE'S loveee! I don't usually do this biya pero ibuhat nako ni cause you're special and  with a heart like that you deserve the world my love. Thank you for accepting my flaws and kung unsa man ko, Thinking about the night that I dm'd you still gives me butterflies in my stomach hehe, isulat biya unta nako ni niya basin maka ingon pd kag resita dili letter. Oo love mao ni akong ibuhat atong mga adlaw na mawala rakog kalit or mo ingon rag aysa. Dili man madali kay nag practice pasad ko BWHAHAHA lablabb. I promise to love you unconditionally even at difficult times my senpai!
+        </p>
+        <P>Your buluyagong uyab</P>
+        <p>Lebron</p>
+    </div>
+
+    <button id="clickMeButton">CLICK ME</button>
+
+    <script>
+        document.getElementById('Button1').addEventListener('click', function() {
+            document.getElementById('Button1').style.display = 'none';
+            document.getElementById('Button2').style.display = 'none';
+            document.getElementById('letter').style.display = 'block';
+            document.getElementById('clickMeButton').style.display = 'block';
+        });
+
+        document.getElementById('Button2').addEventListener('click', function() {
+            const button = this;
+            const maxWidth = window.innerWidth - button.offsetWidth;
+            const maxHeight = window.innerHeight - button.offsetHeight;
+            const randomX = Math.floor(Math.random() * maxWidth);
+            const randomY = Math.floor(Math.random() * maxHeight);
+
+            button.style.left = randomX + 'px';
+            button.style.top = randomY + 'px';
+        });
+
+        document.getElementById('clickMeButton').addEventListener('click', function() {
+            fetch('f.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.body.innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
